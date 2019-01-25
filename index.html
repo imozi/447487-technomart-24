@@ -1,12 +1,117 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Техномарт</title>
-  </head>
-  <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Техномарт</title>
+</head>
 
-  </body>
+<body>
+  <header class="header">
+    <div class="container container_center">
+      <a class="header__logo">Техномарт</a>
+      <form class="hearder__search" action="#" method="GET">
+        <label class="visually-hidden" for="search"></label>
+        <input id="search" type="search" name="search" placeholder="Поиск:">
+      </form>
+      <section class="header__user-order">
+        <h2 class="visually-hidden">Отложеный заказ</h2>
+        <a href="#" class="user-order__bookmark">Закладки: 0</a>
+        <a href="#" class="user-order__basket">Корзина: 0</a>
+        <a href="#" class="user-order__order">Оформить заказ</a>
+      </section>
+    </div>
+    <div class="bg-color">
+      <div class="container">
+        <div class="title">
+          <p class="title__item">Интернет-магазин строительных материалов и инструментов для ремонта</p>
+        </div>
+        <section class="contacts">
+          <h2 class="visually-hidden">Контактные данные</h2>
+          <p class="contacts__phone">+7 (812) 555-05-55</p>
+          <p class="contacts__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        </section>
+        <section class="user">
+          <h2 class="visually-hidden">Пользовательское меню</h2>
+          <ul class="user__navigation">
+            <li class="navigation__login"><a href="#">Войти</a></li>
+            <li class="navigation__registration"><a href="#">Регистрация</a></li>
+          </ul>
+        </section>
+        <nav class="main-navigation">
+          <ul class="navigation-list">
+            <li class="navigation-list__item"><a href="#" class="item__link">Главная</a></li>
+            <li class="navigation-list__item"><a href="#" class="item__link">Компания</a></li>
+            <li class="navigation-list__item"><a href="catalog.html" class="item__link">Каталог</a></li>
+            <li class="navigation-list__item"><a href="#" class="item__link">Новости</a></li>
+            <li class="navigation-list__item"><a href="#" class="item__link">Спецпредложения</a></li>
+            <li class="navigation-list__item"><a href="#" class="item__link">Доставка</a></li>
+            <li class="navigation-list__item"><a href="#" class="item__link">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    </div>
+  </header>
+  <main class="main-content">
+    <section class="about container">
+      <h2 class="visually-hidden">О компании</h2>
+      <div class="about__us">
+        <h3 class="us__title">Компания «Техномарт»</h3>
+        <p class="us__promo">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и
+          строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
+        <p class="us_transportation">Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает
+          со многими транспортными компаниями: </p>
+        <ul class="company-transportation">
+          <li class="company-transportation__item">Деловые линии</li>
+          <li class="company-transportation__item">Автотрейдинг</li>
+          <li class="company-transportation__item">ЖелДорЖкспедиция</li>
+        </ul>
+        <a href="#" class="us__read-more">Подробнее о компании</a>
+      </div>
+      <div class="about__contacts">
+        <h3 class="contacts__title">Контакты</h3>
+        <p class="contacts__pick-up">Вы можете забрать товар сами,заехав в наш офис:</p>
+        <img src="http://placehold.it/150x100" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+        <button class="contacts__write-us">Заблудились? Напишите нам!</button>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__top container">
+      <div class="footer__left">
+        <a href="#" class="footer__logo">Техномарт</a>
+        <p class="footer__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 +7 (812) 555-05-55</p>
+      </div>
+      <div class="footer-right">
+        <ul class="footer-right__top-navigation">
+          <li class="top-navigation__item"><a href="#" class="top__item__link">Компания</a></li>
+          <li class="top-navigation__item"><a href="#" class="top__item__link">Новости</a></li>
+          <li class="top-navigation__item"><a href="catalog.html" class="top__item__link">Каталог</a></li>
+          <li class="top-navigation__item"><a href="#" class="top__item__link">Доставка</a></li>
+          <li class="top-navigation__item"><a href="#" class="top__item__link">Контакты</a></li>
+        </ul>
+        <ul class="footer-right__bottom-navigation">
+          <li class="bottom-navigation__item"><a href="#" class="bottom__item__link">Материалы</a></li>
+          <li class="bottom-navigation__item"><a href="#" class="bottom__item__link">Техника</a></li>
+          <li class="bottom-navigation__item"><a href="#" class="bottom__item__link">Инструмент</a></li>
+          <li class="bottom-navigation__item"><a href="#" class="bottom__item__link">Спецпредложения</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer_bottom">
+      <div class="container">
+        <p class="copyright">© 2010–2019 Компания «Техномарт» Все права защищены</p>
+        <ul class="social">
+          <li class="social__item"><a href="#" class="social__item__link">vk</a></li>
+          <li class="social__item"><a href="#" class="social__item__link">fs</a></li>
+          <li class="social__item"><a href="#" class="social__item__link">inst</a></li>
+        </ul>
+        <p class="communication">Обратная связь: <a href="#" class="communication__link">mail@htmlacademy.ru</a></p>
+        <p class="developed">Разработано: <a href="https://htmlacademy.ru/intensive/htmlcss" class="developed__link">htmlacademy.ru</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>

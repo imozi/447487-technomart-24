@@ -177,7 +177,8 @@ a {
   background-color: #ffffff;
 }
 
-.search__input:hover + .search__label::after {
+.search__input:hover + .search__label::after,
+.search__input:focus + .search__label::after {
   opacity: 1;
 }
 
@@ -205,7 +206,7 @@ a {
   top: 50%;
   left: 16px;
   width: 16px;
-  height: 14px;
+  height: 16px;
   content: "";
   background-image: url('../img/icons/icon-bookmark.svg');
   background-repeat: no-repeat;
@@ -220,7 +221,7 @@ a {
   top: 50%;
   left: 16px;
   width: 16px;
-  height: 14px;
+  height: 15px;
   content: "";
   background-image: url('../img/icons/cart-icon.svg');
   background-repeat: no-repeat;
@@ -468,6 +469,7 @@ a {
   display: -webkit-flex;
   flex-wrap: wrap;
   margin-top: 58px;
+  margin-bottom: 53px;
 }
 
 .offers__item {
@@ -730,7 +732,6 @@ a {
   display: -webkit-flex;
   align-items: center;
   height: 89px;
-  margin-top: 53px;
   margin-bottom: 20px;
   padding-right: 24px;
   padding-left: 28px;
@@ -741,6 +742,7 @@ a {
   margin: 0;
   margin-right: auto;
   font-size: 30px;
+  font-weight: normal;
   line-height: 30px;
   color: #32425c;
   text-transform: uppercase;
@@ -775,4 +777,87 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.product {
+  position: relative;
+  width: 220px;
+  height: 318px;
+  margin-bottom: 21px;
+  border: 1px solid #eaeaea;
+}
+
+.product__name {
+  width: 190px;
+  margin: auto;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.product__purchase {
+  display: none;
+}
+
+.product_new::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 59px;
+  content: "";
+  background-image: url("../img/new.png");
+  background-repeat: no-repeat;
+}
+
+.popular-manufacturers-title {
+  margin: 0;
+  margin-right: auto;
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 30px;
+  color: #32425c;
+  text-transform: uppercase;
+}
+
+.popular-manufacturers-link {
+  position: relative;
+  right: 0;
+  display: block;
+  width: 253px;
+  height: 38px;
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 38px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #ee3643;
+  border-radius: 3px;
+}
+
+.wrapper-manufacturers {
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+
+.wrapper-manufacturers__item {
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 145px;
+  margin-bottom: 20px;
+  border: 1px solid #eaeaea;
 }

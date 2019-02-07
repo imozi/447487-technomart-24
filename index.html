@@ -4,26 +4,32 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Техномарт</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i|PT+Sans:400,400i,700,700i" rel="stylesheet">
 </head>
 
 <body>
   <header class="header">
-    <div class="container">
-      <a class="header__logo">Техномарт</a>
-      <form class="search" action="https://echo.htmlacademy.ru" method="get">
-        <label class="search__label" for="search" aria-label="Поиск"></label>
-        <input class="search__input" id="search" type="search" name="search" placeholder="Поиск:">
-      </form>
-      <section class="user-order">
-        <h2 class="visually-hidden">Отложеный заказ</h2>
-        <a href="#" class="user-order__bookmark">Закладки: 0</a>
-        <a href="#" class="user-order__basket">Корзина: 0</a>
-        <a href="#" class="user-order__order">Оформить заказ</a>
-      </section>
+    <div class="header__wrapper">
+      <div class="container container_flex">
+        <a class="header__logo-link"><img class="header__logo-img" src="img/logo.png" alt="Техномарт" width="110"
+            height="18"></a>
+        <form class="search" action="https://echo.htmlacademy.ru" method="get">
+          <input class="search__input" id="search" type="search" name="search" placeholder="Поиск:" required>
+          <label class="search__label" for="search" aria-label="Поиск"></label>
+        </form>
+        <section class="user-order">
+          <h2 class="visually-hidden">Отложеный заказ</h2>
+          <a href="#" class="user-order__link user-order__link_pl user-order__link_icon-bm">Закладки: 0</a>
+          <a href="#" class="user-order__link user-order__link_pl user-order__link_icon-bt">Корзина: 0</a>
+          <a href="#" class="user-order__link user-order__link_bgc">Оформить заказ</a>
+        </section>
+      </div>
     </div>
     <div class="substrate">
-      <div class="container">
-        <h1 class="description">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+      <div class="container container_flex">
+        <h1 class="description">Интернет-магазин строительных материалов <br> и инструментов для ремонта</h1>
         <section class="contacts">
           <h2 class="visually-hidden">Контактные данные</h2>
           <p class="contacts__phone">+7 (812) 555-05-55</p>
@@ -33,9 +39,11 @@
           <h2 class="visually-hidden">Пользовательское меню</h2>
           <ul class="user__navigation">
             <li class="user__navigation-login"><a href="#" class="user__navigation-login-link">Войти</a></li>
-            <li class="user__navigation-registration"><a href="#" class="user__navigation-login-link">Регистрация</a></li>
+            <li class="user__navigation-registration"><a href="#" class="user__navigation-registration-link">Регистрация</a></li>
           </ul>
         </section>
+      </div>
+      <div class="container">
         <nav class="main-navigation">
           <ul class="main-navigation__list">
             <li class="main-navigation__list-item"><a class="main-navigation__list-link">Главная</a></li>
@@ -53,47 +61,50 @@
   <main class="main-content">
     <section class="offers container">
       <h2 class="visually-hidden">Наши предложения</h2>
-      <section class="offers__item offers__item_new">
+      <section class="offers__item offers__item-material offers__item_new">
         <h2 class="offers__title">Материалы</h2>
         <a href="#" class="offers__link">На любой вкус</a>
       </section>
-      <section class="offers__item">
+      <section class="offers__item offers__item-tools">
         <h2 class="offers__title">Инструмент</h2>
         <a href="#" class="offers__link">На все случаи</a>
       </section>
-      <section class="offers__item">
+      <section class="offers__item offers__item-technique">
         <h2 class="offers__title">Техника</h2>
         <a href="#" class="offers__link">Для стройки</a>
       </section>
       <section class="offers__slider">
-        <div class="offers__slider-item">
+        <div class="offers__slider-item offers__slider-item_display">
           <h2 class="offers__slider-title">Перфораторы</h2>
           <p class="offers__slider-subtitle">Настоящие мужские игрушки</p>
-          <a href="catalog.html" class="offers__slider-link">Открыть каталог</a>
-          <img src="img/img-slider/slide__promo-img1.jpg" alt="Перфораторы">
-          <button class="offers__slider-btn offers__slider-btn_left" aria-label="Предыдущий слайд"></button>
-          <button class="offers__slider-btn offers__slider-btn_right" aria-label="Следующий слайд"></button>
+          <img src="img/img-slider/slide__promo-img1.jpg" width="620" height="266" alt="Перфораторы">
         </div>
         <div class="offers__slider-item">
           <h2 class="offers__slider-title">Дрели</h2>
-          <p class="offers__slider-subtitle">Соседям на рабость!</p>
-          <a href="catalog.html" class="offers__slider-link">Открыть каталог</a>
-          <img src="img/img-slider/slide__promo-img2.jpg" alt="Дрели">
-          <button class="offers__slider-btn offers__slider-btn_left" aria-label="Предыдущий слайд"></button>
-          <button class="offers__slider-btn offers__slider-btn_right" aria-label="Следующий слайд"></button>
+          <p class="offers__slider-subtitle">Соседям на радость!</p>
+          <img src="img/img-slider/slide__promo-img2.jpg" width="620" height="266" alt="Дрели">
+        </div>
+        <a href="catalog.html" class="offers__slider-link">Открыть каталог</a>
+        <button class="offers__slider-btn offers__slider-btn_left" aria-label="Предыдущий слайд"></button>
+        <button class="offers__slider-btn offers__slider-btn_right" aria-label="Следующий слайд"></button>
+        <div class="offers__slide-indecator">
+          <span class="current-slide__item current-slide__item_after"></span>
+          <span class="current-slide__item"></span>
         </div>
       </section>
-      <section class="offers__item">
-        <h2 class="offers__title">Скидки 50%</h2>
-        <a href="#" class="offers__link">На 350 товаров</a>
-      </section>
-      <section class="offers__item">
-        <h2 class="offers__title">Доставка</h2>
-        <a href="#" class="offers__link">Бесплатно</a>
-      </section>
+      <div class="offers__wrapper">
+        <section class="offers__item offers__item-discounts">
+          <h2 class="offers__title">Скидки 50%</h2>
+          <a href="#" class="offers__link">На 350 товаров</a>
+        </section>
+        <section class="offers__item offers__item-delivery">
+          <h2 class="offers__title">Доставка</h2>
+          <a href="#" class="offers__link">Бесплатно</a>
+        </section>
     </section>
+    </div>
     <section class="popular-product container">
-      <div class="wrapper">
+      <div class="wrapper-row">
         <h2 class="popular-product-title">Популярные товары:</h2>
         <a href="#" class="popular-product-link">Все популярные товары</a>
       </div>
@@ -246,7 +257,7 @@
           <label class="write-us__label" for="your-name">Ваше Имя:</label>
           <input class="write-us__input" type="text" name="name" id="your-name" placeholder="Имя Фамилия">
           <label class="write-us__label" for="your-email">Ваш email:</label>
-          <input class="write-us__input"  type="email" name="email" id="your-email" placeholder="email@example.com">
+          <input class="write-us__input" type="email" name="email" id="your-email" placeholder="email@example.com">
           <label class="write-us__label" for="your-text">Текст письма:</label>
           <textarea class="write-us__textarea" name="text" id="your-text" cols="30" rows="10">В свободной форме</textarea>
           <input class="write-us__submit" type="submit" name="submit" value="Отправить">
@@ -290,6 +301,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

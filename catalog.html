@@ -4,25 +4,31 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Техномарт-Каталог</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i|PT+Sans:400,400i,700,700i" rel="stylesheet">
 </head>
 
 <body>
   <header class="header">
-    <div class="container">
-      <a href="index.html" class="header__logo">Техномарт</a>
-      <form class="search" action="https://echo.htmlacademy.ru" method="get">
-        <label class="search__label" for="search" aria-label="Поиск"></label>
-        <input class="search__input" id="search" type="search" name="search" placeholder="Поиск:">
-      </form>
-      <section class="user-order">
-        <h2 class="visually-hidden">Отложеный заказ</h2>
-        <a href="#" class="user-order__bookmark">Закладки: 0</a>
-        <a href="#" class="user-order__basket">Корзина: 10</a>
-        <a href="#" class="user-order__order">Оформить заказ</a>
-      </section>
+    <div class="header__wrapper">
+      <div class="container container_flex">
+        <a href="index.html" class="header__logo-link"><img class="header__logo-img" src="img/logo.png" alt="Техномарт"
+            width="110" height="18"></a>
+        <form class="search" action="https://echo.htmlacademy.ru" method="get">
+          <input class="search__input" id="search" type="search" name="search" placeholder="Поиск:">
+          <label class="search__label" for="search" aria-label="Поиск"></label>
+        </form>
+        <section class="user-order">
+          <h2 class="visually-hidden">Отложеный заказ</h2>
+          <a href="#" class="user-order__link user-order__link_pl user-order__link_icon-bm">Закладки: 0</a>
+          <a href="#" class="user-order__link user-order__link_pl user-order__link_icon-bt">Корзина: 10</a>
+          <a href="#" class="user-order__link user-order__link_bgc">Оформить заказ</a>
+        </section>
+      </div>
     </div>
     <div class="substrate">
-      <div class="container">
+      <div class="container container_flex">
         <h1 class="description">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
         <section class="contacts">
           <h2 class="visually-hidden">Контактные данные</h2>
@@ -39,6 +45,8 @@
             <li class="user__navigation-profile"><a href="#" class="user__navigation-profile-link">Личный кабинет</a></li>
           </ul>
         </section>
+      </div>
+      <div class="container">
         <nav class="main-navigation">
           <ul class="main-navigation__list">
             <li class="main-navigation__list-item"><a href="index.html" class="main-navigation__list-link">Главная</a></li>
@@ -59,7 +67,7 @@
         <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link" aria-label="Главная"></a></li>
         <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Каталог</a></li>
         <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Инструмент</a></li>
-        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Перфораторы</a></li>
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link">Перфораторы</a></li>
       </ul>
       <div class="name-product">
         <h2 class="name-product__title">Перфораторы</h2>
@@ -300,6 +308,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

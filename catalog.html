@@ -6,14 +6,13 @@
   <title>HTML Academy: Техномарт-Каталог</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i|PT+Sans:400,400i,700,700i" rel="stylesheet">
 </head>
 
 <body>
   <header class="header">
     <div class="header__wrapper">
       <div class="container container_flex">
-        <a href="index.html" class="header__logo-link"><img class="header__logo-img" src="img/logo.png" alt="Техномарт"
+        <a href="index.html" class="header__logo-link"><img class="header__logo-img" src="img/logo-header.png" alt="Техномарт"
             width="110" height="18"></a>
         <form class="search" action="https://echo.htmlacademy.ru" method="get">
           <input class="search__input" id="search" type="search" name="search" placeholder="Поиск:">
@@ -274,37 +273,42 @@
     </div>
   </main>
   <footer class="footer">
-    <div class="footer__top container">
-      <div class="footer__top_left">
-        <a class="footer__top-logo">Техномарт</a>
-        <p class="footer__top-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 +7 (812) 555-05-55</p>
-      </div>
-      <div class="footer__top_right">
-        <ul class="footer__top-navigation">
-          <li class="footer__top-navigation-item"><a href="#" class="footer__top-navigation-link">Компания</a></li>
-          <li class="footer__top-navigation-item"><a href="#" class="footer__top-navigation-link">Новости</a></li>
-          <li class="footer__top-navigation-item"><a href="catalog.html" class="footer__top-navigation-link">Каталог</a></li>
-          <li class="footer__top-navigation-item"><a href="#" class="footer__top-navigation-link">Доставка</a></li>
-          <li class="footer__top-navigation-item"><a href="#" class="footer__top-navigation-link">Контакты</a></li>
-        </ul>
-        <ul class="footer__bottom-navigation">
-          <li class="footer__bottom-navigation-item"><a href="#" class="footer__bottom-navigation-link">Материалы</a></li>
-          <li class="footer__bottom-navigation-item"><a href="#" class="footer__bottom-navigation-link">Техника</a></li>
-          <li class="footer__bottom-navigation-item"><a href="#" class="footer__bottom-navigation-link">Инструмент</a></li>
-          <li class="footer__bottom-navigation-item"><a href="#" class="footer__bottom-navigation-link">Спецпредложения</a></li>
-        </ul>
+    <div class="footer-wrapper-top">
+      <div class="footer__top container">
+        <div class="footer__top_left">
+          <a href="index.html" class="footer__top-logo-link"><img src="img/logo-header.png" width="138" height="23" alt="Техномарт"></a>
+          <p class="footer__top-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br> +7 (812) 555-05-55</p>
+        </div>
+        <div class="footer__top_right">
+          <ul class="footer__top-navigation">
+            <li class="footer__top-navigation-item"><a href="#" class="footer__top-navigation-link">Компания</a></li>
+            <li class="footer__top-navigation-item"><a href="#" class="footer__top-navigation-link">Новости</a></li>
+            <li class="footer__top-navigation-item"><a href="catalog.html" class="footer__top-navigation-link">Каталог</a></li>
+            <li class="footer__top-navigation-item"><a href="#" class="footer__top-navigation-link">Доставка</a></li>
+            <li class="footer__top-navigation-item"><a href="#" class="footer__top-navigation-link">Контакты</a></li>
+          </ul>
+          <ul class="footer__bottom-navigation">
+            <li class="footer__bottom-navigation-item"><a href="#" class="footer__bottom-navigation-link">Материалы</a></li>
+            <li class="footer__bottom-navigation-item"><a href="#" class="footer__bottom-navigation-link">Техника</a></li>
+            <li class="footer__bottom-navigation-item"><a href="#" class="footer__bottom-navigation-link">Инструмент</a></li>
+            <li class="footer__bottom-navigation-item"><a href="#" class="footer__bottom-navigation-link">Спецпредложения</a></li>
+          </ul>
+        </div>
       </div>
     </div>
-    <div class="footer__bottom">
-      <div class="container">
-        <p class="footer__bottom-copyright">© 2010–2019 Компания «Техномарт» Все права защищены</p>
+    <div class="footer-wrapper-bottom">
+      <div class="footer__bottom container">
+        <p class="footer__bottom-copyright">© 2010–2019 Компания «Техномарт» <br> Все права защищены</p>
         <ul class="footer__bottom-social">
-          <li class="footer__bottom-social-item"><a href="#" class="footer__bottom-social-link" aria-label="Техномарт в ВКонтакте"></a></li>
-          <li class="footer__bottom-social-item"><a href="#" class="footer__bottom-social-link" aria-label="Техномарт в Facebook"></a></li>
-          <li class="footer__bottom-social-item"><a href="#" class="footer__bottom-social-link" aria-label="Техномарт в Instagram"></a></li>
+          <li class="footer__bottom-social-item"><a href="#" class="footer__bottom-social-link footer__bottom-social-vk"
+              aria-label="Техномарт в ВКонтакте"></a></li>
+          <li class="footer__bottom-social-item"><a href="#" class="footer__bottom-social-link footer__bottom-social-fb"
+              aria-label="Техномарт в Facebook"></a></li>
+          <li class="footer__bottom-social-item"><a href="#" class="footer__bottom-social-link footer__bottom-social-inst"
+              aria-label="Техномарт в Instagram"></a></li>
         </ul>
-        <p class="footer__bottom-communication">Обратная связь: <a href="#" class="footer__bottom-communication-link">mail@htmlacademy.ru</a></p>
-        <p class="footer__bottom-developed">Разработано: <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer__bottom-developed-link">htmlacademy.ru</a></p>
+        <p class="footer__bottom-communication">Обратная связь: <br> <a href="#" class="footer__bottom-communication-link">mail@htmlacademy.ru</a></p>
+        <p class="footer__bottom-developed">Разработано: <br> <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer__bottom-developed-link">htmlacademy.ru</a></p>
       </div>
     </div>
   </footer>

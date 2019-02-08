@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Cuprum";
   src: url("../fonts/cuprum.woff") format("woff"),
-       url("../fonts/cuprum.woff2") format("woff2");
+    url("../fonts/cuprum.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -9,7 +9,7 @@
 @font-face {
   font-family: "Cuprum";
   src: url("../fonts/cuprumbold.woff") format("woff"),
-       url("../fonts/cuprumbold.woff2") format("woff2");
+    url("../fonts/cuprumbold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -17,7 +17,7 @@
 @font-face {
   font-family: "Cuprum";
   src: url("../fonts/cuprumitalic.woff") format("woff"),
-       url("../fonts/cuprumitalic.woff2") format("woff2");
+    url("../fonts/cuprumitalic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
 }
@@ -25,7 +25,7 @@
 @font-face {
   font-family: "Cuprum";
   src: url("../fonts/cuprumbolditalic.woff") format("woff"),
-       url("../fonts/cuprumbolditalic.woff2") format("woff2");
+    url("../fonts/cuprumbolditalic.woff2") format("woff2");
   font-weight: 700;
   font-style: italic;
 }
@@ -33,7 +33,7 @@
 @font-face {
   font-family: "Cuprum";
   src: url("../fonts/cuprumitalic.woff") format("woff"),
-       url("../fonts/cuprumitalic.woff2") format("woff2");
+    url("../fonts/cuprumitalic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
 }
@@ -41,7 +41,7 @@
 @font-face {
   font-family: "PT Sans";
   src: url("../fonts/ptsans.woff") format("woff"),
-       url("../fonts/ptsans.woff2") format("woff2");
+    url("../fonts/ptsans.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -49,7 +49,7 @@
 @font-face {
   font-family: "PT Sans";
   src: url("../fonts/ptsansbold.woff") format("woff"),
-       url("../fonts/ptsansbold.woff2") format("woff2");
+    url("../fonts/ptsansbold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -73,6 +73,8 @@ body {
 a {
   text-decoration: none;
 }
+
+/* Стилизация страницы index */
 
 .visually-hidden {
   position: absolute;
@@ -168,12 +170,12 @@ a {
   background-color: #ffffff;
 }
 
-.search__input:hover + .search__label::after,
-.search__input:focus + .search__label::after {
+.search__input:hover+.search__label::after,
+.search__input:focus+.search__label::after {
   opacity: 1;
 }
 
-.search__input:focus + .search__label::after {
+.search__input:focus+.search__label::after {
   background-image: url('../img/icons/icon-search-red.svg');
 }
 
@@ -357,7 +359,6 @@ a {
   position: relative;
   display: block;
   width: 121px;
-  height: 45px;
   margin-right: 10px;
   padding-left: 20px;
   font-size: 21px;
@@ -385,7 +386,6 @@ a {
 .user__navigation-registration-link {
   display: block;
   width: 150px;
-  height: 45px;
   font-size: 21px;
   color: rgba(0, 0, 0, 1);
   line-height: 45px;
@@ -717,7 +717,7 @@ a {
   border-radius: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
 
 .wrapper-row {
@@ -820,7 +820,7 @@ a {
   margin-left: 42px;
   margin-top: 9px;
   padding-left: 15px;
-  font-family: "PT Sans",sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   color: #fff;
   font-size: 17px;
@@ -1036,7 +1036,7 @@ a {
   padding-left: 80px;
 }
 
-.services__block-item  {
+.services__block-item {
   position: relative;
   display: none;
 }
@@ -1079,14 +1079,14 @@ a {
   background-color: #32425c;
   border: none;
   box-shadow: 0px 1px 0 0 #293449,
-              inset 0px 1px 0 0 #405069;
+    inset 0px 1px 0 0 #405069;
   cursor: pointer;
   outline: none;
 }
 
 .services__control :first-child {
   box-shadow: 0px 1px 0 0 #ffffff,
-              inset 0px 1px 0 0 #ffffff;
+    inset 0px 1px 0 0 #ffffff;
 }
 
 .services__control :last-child {
@@ -1267,7 +1267,7 @@ a {
   width: 300px;
 }
 
-.about__contacts-title  {
+.about__contacts-title {
   margin: 0;
   font-size: 30px;
   font-weight: normal;
@@ -1282,7 +1282,7 @@ a {
   line-height: 23px;
 }
 
-.about__map{
+.about__map {
   cursor: pointer;
 }
 
@@ -1323,6 +1323,7 @@ a {
 .footer-wrapper-top {
   background-color: #32425c;
 }
+
 .footer-wrapper-bottom {
   background-color: #293449;
 }
@@ -1535,7 +1536,7 @@ a {
 .footer__bottom-communication-link:hover,
 .footer__bottom-communication-link:focus,
 .footer__bottom-developed-link:hover,
-.footer__bottom-developed-link:focus  {
+.footer__bottom-developed-link:focus {
   text-decoration: underline;
 }
 
@@ -1543,4 +1544,99 @@ a {
 .footer__bottom-developed-link:active {
   color: #ee3643;
   text-decoration: none;
+}
+
+/* Стилизация странцы catalog */
+
+.container .user {
+  margin-left: 50px;
+}
+
+.user .user__navigation {
+  position: relative;
+  flex-wrap: wrap;
+  width: 299px;
+}
+
+.user__navigation-logged-in {
+  position: relative;
+  width: 299px;
+  height: 45px;
+  padding-left: 46px;
+  text-align: left;
+  background-color: #ffffff;
+}
+
+.user__navigation-logged-in {
+  margin-bottom: 7px;
+}
+
+.user__navigation-logged-in-link {
+  font-size: 21px;
+  color: #000000;
+  line-height: 45px;
+}
+
+.user__navigation-logged-in-link::before {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  width: 20px;
+  height: 18px;
+  content: "";
+  opacity: 0.3;
+  background-image: url("../img/icons/icon-user.svg");
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+}
+
+.user__navigation-out-link::before {
+  position: absolute;
+  top: 15px;
+  right: 11px;
+  width: 20px;
+  height: 18px;
+  content: "";
+  opacity: 0.3;
+  background-image: url("../img/icons/icon-logout.svg");
+  background-repeat: no-repeat;
+}
+
+.user__navigation-order-link,
+.user__navigation-profile-link {
+  font-size: 16px;
+  color: #32425c;
+  text-decoration: underline;
+}
+
+.user__navigation-order {
+  position: relative;
+  margin-left: 18px;
+}
+
+.user__navigation-profile {
+  margin-left: 32px;
+}
+
+.user__navigation-order::after {
+  position: absolute;
+  top: 50%;
+  right: -19px;
+  width: 5px;
+  height: 5px;
+  content: "";
+  border-radius: 50%;
+  background-color: #32425c;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+}
+
+.wrapper-col {
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
 }

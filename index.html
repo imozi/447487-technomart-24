@@ -104,11 +104,11 @@
     </div>
     <section class="popular-product container">
       <div class="wrapper-row">
-        <h2 class="popular-product-title">Популярные товары:</h2>
-        <a href="#" class="popular-product-link">Все популярные товары</a>
+        <h2 class="popular-title">Популярные товары:</h2>
+        <a href="#" class="popular-link">Все популярные товары</a>
       </div>
       <div class="wrapper-product">
-        <article class="product">
+        <article class="product" tabindex="0">
           <h2 class="visually-hidden">Описание товара</h2>
           <section class="product__about">
             <img class="product__image" src="img/bosh-bfg-9000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
@@ -121,7 +121,7 @@
             <button class="product__purchase-bookmark">В закладки</button>
           </div>
         </article>
-        <article class="product">
+        <article class="product" tabindex="0">
           <h2 class="visually-hidden">Описание товара</h2>
           <section class="product__about">
             <img class="product__image" src="img/bosh-bfg-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
@@ -134,7 +134,7 @@
             <button class="product__purchase-bookmark">В закладки</button>
           </div>
         </article>
-        <article class="product">
+        <article class="product" tabindex="0">
           <h2 class="visually-hidden">Описание товара</h2>
           <section class="product__about">
             <img class="product__image" src="img/bosh-bfg-6000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
@@ -147,12 +147,12 @@
             <button class="product__purchase-bookmark">В закладки</button>
           </div>
         </article>
-        <article class="product product_new">
+        <article class="product product_new" tabindex="0">
           <h2 class="visually-hidden">Описание товара</h2>
           <section class="product__about">
             <img class="product__image" src="img/bosh-bfg-2000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
             <h3 class="product__name">Перфоратор BOSCH BFG 2000</h3>
-            <span class="product__discount product__discount_visually-hidden"></span>
+            <span class="product__discount"></span>
             <p class="product__price">12500 Р.</p>
           </section>
           <div class="product__purchase">
@@ -164,34 +164,34 @@
     </section>
     <section class="popular-manufacturers container">
       <div class="wrapper-row">
-        <h2 class="popular-manufacturers-title">Популярные производители:</h2>
-        <a href="#" class="popular-manufacturers-link">Все производители</a>
+        <h2 class="popular-title">Популярные производители:</h2>
+        <a href="#" class="popular-link">Все производители</a>
       </div>
       <div class="wrapper-manufacturers">
-        <div class="wrapper-manufacturers__item">
-          <img class="wrapper-manufacturers__img" src="img/bosch.jpg" alt="Bosh">
-        </div>
-        <div class="wrapper-manufacturers__item">
-          <img class="wrapper-manufacturers__img" src="img/Makita.jpg" alt="Makita">
-        </div>
-        <div class="wrapper-manufacturers__item">
-          <img class="wrapper-manufacturers__img" src="img/DeWALT.jpg" alt="DeWALT">
-        </div>
-        <div class="wrapper-manufacturers__item">
-          <img class="wrapper-manufacturers__img" src="img/Interstol.jpg" alt="Интерскол">
-        </div>
-        <div class="wrapper-manufacturers__item">
-          <img class="wrapper-manufacturers__img" src="img/Hitachi.jpg" alt="Hitachi">
-        </div>
-        <div class="wrapper-manufacturers__item">
-          <img class="wrapper-manufacturers__img" src="img/LG.jpg" alt="LG">
-        </div>
-        <div class="wrapper-manufacturers__item">
-          <img class="wrapper-manufacturers__img" src="img/AEG.jpg" alt="AEG">
-        </div>
-        <div class="wrapper-manufacturers__item">
-          <img class="wrapper-manufacturers__img" src="img/Metabo.jpg" alt="Metabo">
-        </div>
+        <a href="#" class="manufacturers__link">
+          <img class="manufacturers__img" src="img/bosch.jpg" alt="Bosh">
+        </a>
+        <a href="#" class="manufacturers__link">
+          <img class="manufacturers__img" src="img/Makita.jpg" alt="Makita">
+        </a>
+        <a href="#" class="manufacturers__link">
+          <img class="manufacturers__img" src="img/DeWALT.jpg" alt="DeWALT">
+        </a>
+        <a href="#" class="manufacturers__link">
+          <img class="manufacturers__img" src="img/Interstol.jpg" alt="Интерскол">
+        </a>
+        <a href="#" class="manufacturers__link">
+          <img class="manufacturers__img" src="img/Hitachi.jpg" alt="Hitachi">
+        </a>
+        <a href="#" class="manufacturers__link">
+          <img class="manufacturers__img" src="img/LG.jpg" alt="LG">
+        </a>
+        <a href="#" class="manufacturers__link">
+          <img class="manufacturers__img" src="img/AEG.jpg" alt="AEG">
+        </a>
+        <a href="#" class="manufacturers__link">
+          <img class="manufacturers__img" src="img/Metabo.jpg" alt="Metabo">
+        </a>
       </div>
     </section>
     <section class="services">
@@ -199,29 +199,34 @@
         <h2 class="services__title">Сервисы</h2>
         <p class="services__subtitle">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо
           всех сил, чтобы сделать ваши покупки приятными.</p>
-        <div class="services__control">
-          <button class="services__control-btn services__control-btn_show">Доставка</button>
-          <button class="services__control-btn">Гарантия</button>
-          <button class="services__control-btn">Кредит</button>
-        </div>
-        <div class="services__block">
-          <section class="services__block-item">
-            <h2 class="services__block-title">Доставка</h2>
-            <p class="services__block-subtitle">Мы с удовольствием доставим ваш товар прямо к вашему подъезду
-              совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
-          </section>
-          <section class="services__block-item">
-            <h2 class="services__block-title">Гарантия</h2>
-            <p class="services__block-subtitle">Если купленный у нас товар поломается или заискрит, а также в случае
-              пожара, спровоцированного его возгаранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем
-              сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
-          </section>
-          <section class="services__block-item">
-            <h2 class="services__block-title">Кредит</h2>
-            <p class="services__block-subtitle">Залезть в долговую яму стало проще! Кредитные консультанты придут вам
-              на помощь.</p>
-            <a href="#" class="services__block-link">Отправить заявку</a>
-          </section>
+        <div class="wrapper-service">
+          <div class="services__control">
+            <button class="services__control-btn services__control-btn_active">Доставка</button>
+            <button class="services__control-btn">Гарантия</button>
+            <button class="services__control-btn">Кредит</button>
+          </div>
+          <div class="services__block">
+            <section class="services__block-item services__block-delivery services__block_display">
+              <h2 class="services__block-title">Доставка</h2>
+              <p class="services__block-subtitle">Мы с удовольствием доставим ваш товар прямо <br> к вашему подъезду
+                совершенно бесплатно! <br> Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!</p>
+            </section>
+            <section class="services__block-item services__block-guarantee">
+              <h2 class="services__block-title">Гарантия</h2>
+              <p class="services__block-subtitle">Если купленный у нас товар поломается или заискрит, <br> а также в
+                случае
+                пожара, спровоцированного его возгаранием,<br> вы всегда можете быть уверены в нашей гарантии. Мы
+                обменяем <br>
+                сгоревший товар на новый. <br> Дом уж восстановите как-нибудь сами.</p>
+            </section>
+            <section class="services__block-item services__block-credit">
+              <h2 class="services__block-title">Кредит</h2>
+              <p class="services__block-subtitle">Залезть в долговую яму стало проще! <br> Кредитные консультанты
+                придут вам
+                на помощь.</p>
+              <a href="#" class="services__block-link">Отправить заявку</a>
+            </section>
+          </div>
         </div>
       </div>
     </section>

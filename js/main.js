@@ -1,6 +1,8 @@
 var sliderContent = document.querySelectorAll('.offers__slider-item'),
     sliderBtn = document.querySelectorAll('.offers__slider-btn'),
     currentSlide = document.querySelectorAll('.current-slide__item'),
+    serviceBtn = document.querySelectorAll('.services__control-btn'),
+    serviceContent = document.querySelectorAll('.services__block-item'),
     currentIndex = 0;
 
 for (var i = 0; i < sliderBtn.length; i++) {
@@ -9,7 +11,7 @@ for (var i = 0; i < sliderBtn.length; i++) {
   })
 }
 
-function clearClass() {
+function clearClassSlider() {
   for (var i = 0; i < sliderContent.length; i++) {
     sliderContent[i].classList.remove('offers__slider-item_display');
     currentSlide[i].classList.remove('current-slide__item_after');
@@ -25,7 +27,38 @@ function slideShow(textContent) {
       currentIndex = sliderContent.length - 1;
     }
   }
-  clearClass();
+  clearClassSlider();
   sliderContent[currentIndex].classList.add('offers__slider-item_display');
   currentSlide[currentIndex].classList.add('current-slide__item_after');
+}
+
+function clearClassService () {
+  for (var i = 0; i < serviceContent.length; i++) {
+  serviceBtn[i].classList.remove('services__control-btn_active');
+  serviceContent[i].classList.remove('services__block_display');
+  }
+}
+
+for (var i = 0; i < serviceBtn.length; i++) {
+  serviceBtn[i].addEventListener('click', function (e) {
+    serviceShow(e.target.textContent);
+  })
+}
+
+
+function serviceShow (textContent){
+  clearClassService();
+
+  if(textContent === 'Доставка') {
+    serviceBtn[0].classList.add('services__control-btn_active');
+    serviceContent[0].classList.add('services__block_display');
+  }
+  if (textContent === 'Гарантия') {
+    serviceBtn[1].classList.add('services__control-btn_active');
+    serviceContent[1].classList.add('services__block_display');
+  }
+  if (textContent === 'Кредит') {
+    serviceBtn[2].classList.add('services__control-btn_active');
+    serviceContent[2].classList.add('services__block_display');
+  }
 }

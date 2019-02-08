@@ -1548,6 +1548,10 @@ a {
 
 /* Стилизация странцы catalog */
 
+.user-order__link_bg {
+  background-color: #ee3643;
+}
+
 .container .user {
   margin-left: 50px;
 }
@@ -1558,13 +1562,15 @@ a {
   width: 299px;
 }
 
-.user__navigation-logged-in {
+.user__navigation-logged-in-link {
   position: relative;
+  display: block;
   width: 299px;
   height: 45px;
   padding-left: 46px;
   text-align: left;
   background-color: #ffffff;
+  outline: none;
 }
 
 .user__navigation-logged-in {
@@ -1573,7 +1579,7 @@ a {
 
 .user__navigation-logged-in-link {
   font-size: 21px;
-  color: #000000;
+  color: rgba(0, 0, 0, 1);
   line-height: 45px;
 }
 
@@ -1607,8 +1613,9 @@ a {
 .user__navigation-order-link,
 .user__navigation-profile-link {
   font-size: 16px;
-  color: #32425c;
+  color: rgba(50, 66, 92, 1);
   text-decoration: underline;
+  outline: none;
 }
 
 .user__navigation-order {
@@ -1632,6 +1639,34 @@ a {
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
+}
+
+.user__navigation-logged-in-link:hover::before,
+.user__navigation-logged-in-link:hover + .user__navigation-out-link::before,
+.user__navigation-logged-in-link:focus::before,
+.user__navigation-logged-in-link:focus + .user__navigation-out-link::before {
+  opacity: 1;
+}
+
+.user__navigation-logged-in-link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.user__navigation-logged-in-link:active::before,
+.user__navigation-logged-in-link:active + .user__navigation-out-link::before {
+  opacity: 0.3;
+}
+
+.user__navigation-order-link:hover,
+.user__navigation-order-link:focus,
+.user__navigation-profile-link:hover,
+.user__navigation-profile-link:focus {
+  color: #ee3643;
+}
+
+.user__navigation-order-link:active,
+.user__navigation-profile-link:active {
+  color: rgba(50, 66, 92, 0.3);
 }
 
 .wrapper-col {

@@ -1410,6 +1410,7 @@ a {
   height: 21px;
   background-image: url("../img/icons/close-form.svg");
   background-repeat: no-repeat;
+  background-color: transparent;
   border: none;
   outline: none;
   cursor: pointer;

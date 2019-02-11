@@ -255,20 +255,30 @@
         <button class="about__contacts-write-us">Заблудились? Напишите нам!</button>
       </div>
       <div class="popup-map">
-        <img src="img/map-big.jpg" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+        <img class="popup-map__img" src="img/map-big.jpg" width="1200" height="779" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
         <button class="popup-map__close" aria-label="Закрыть"></button>
       </div>
-      <div class="write-us write-us_hidden">
-        <form action="https://echo.htmlacademy.ru" method="post">
-          <label class="write-us__label" for="your-name">Ваше Имя:</label>
-          <input class="write-us__input" type="text" name="name" id="your-name" placeholder="Имя Фамилия">
-          <label class="write-us__label" for="your-email">Ваш email:</label>
-          <input class="write-us__input" type="email" name="email" id="your-email" placeholder="email@example.com">
-          <label class="write-us__label" for="your-text">Текст письма:</label>
-          <textarea class="write-us__textarea" name="text" id="your-text" cols="30" rows="10">В свободной форме</textarea>
-          <input class="write-us__submit" type="submit" name="submit" value="Отправить">
-          <button class="write-us__close" aria-label="Закрыть"></button>
+      <div class="write-us">
+        <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="wrapper-answer">
+            <p class="wrapper-name">
+              <label class="write-us__label" for="your-name">Ваше Имя:</label>
+              <input class="write-us__input" type="text" name="name" id="your-name" placeholder="Имя Фамилия">
+            </p>
+            <p class="wrapper-email">
+              <label class="write-us__label" for="your-email">Ваш email:</label>
+              <input class="write-us__input" type="email" name="email" id="your-email" placeholder="email@example.com">
+            </p>
+            <p class="wrapper-text">
+              <label class="write-us__label" for="your-text">Текст письма:</label>
+              <textarea class="write-us__textarea" name="text" id="your-text" cols="61" rows="6" placeholder="В свободной форме"></textarea>
+            </p>
+          </div>
+          <div class="wrapper-answer-btn">
+            <input class="write-us__submit" type="submit" name="submit" value="Отправить">
+          </div>
         </form>
+        <button class="write-us__close" aria-label="Закрыть"></button>
       </div>
     </section>
   </main>
@@ -300,9 +310,12 @@
       <div class="footer__bottom container">
         <p class="footer__bottom-copyright">© 2010–2019 Компания «Техномарт» <br> Все права защищены</p>
         <ul class="footer__bottom-social">
-          <li class="footer__bottom-social-item"><a href="#" class="footer__bottom-social-link footer__bottom-social-vk" aria-label="Техномарт в ВКонтакте"></a></li>
-          <li class="footer__bottom-social-item"><a href="#" class="footer__bottom-social-link footer__bottom-social-fb" aria-label="Техномарт в Facebook"></a></li>
-          <li class="footer__bottom-social-item"><a href="#" class="footer__bottom-social-link footer__bottom-social-inst" aria-label="Техномарт в Instagram"></a></li>
+          <li class="footer__bottom-social-item"><a href="#" class="footer__bottom-social-link footer__bottom-social-vk"
+              aria-label="Техномарт в ВКонтакте"></a></li>
+          <li class="footer__bottom-social-item"><a href="#" class="footer__bottom-social-link footer__bottom-social-fb"
+              aria-label="Техномарт в Facebook"></a></li>
+          <li class="footer__bottom-social-item"><a href="#" class="footer__bottom-social-link footer__bottom-social-inst"
+              aria-label="Техномарт в Instagram"></a></li>
         </ul>
         <p class="footer__bottom-communication">Обратная связь: <br> <a href="#" class="footer__bottom-communication-link">mail@htmlacademy.ru</a></p>
         <p class="footer__bottom-developed">Разработано: <br> <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer__bottom-developed-link">htmlacademy.ru</a></p>

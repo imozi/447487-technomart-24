@@ -3,6 +3,12 @@ var sliderContent = document.querySelectorAll('.offers__slider-item'),
     currentSlide = document.querySelectorAll('.current-slide__item'),
     serviceBtn = document.querySelectorAll('.services__control-btn'),
     serviceContent = document.querySelectorAll('.services__block-item'),
+    writeBtn = document.querySelector('.about__contacts-write-us'),
+    popUpWrite = document.querySelector('.write-us'),
+    closePopUpWrite = document.querySelector('.write-us__close'),
+    miniMap = document.querySelector('.about__map'),
+    popUpBigMap = document.querySelector('.popup-map'),
+    closePopUpBigMap = document.querySelector('.popup-map__close'),
     currentIndex = 0;
 
 for (var i = 0; i < sliderBtn.length; i++) {
@@ -62,3 +68,20 @@ function serviceShow (textContent){
     serviceContent[2].classList.add('services__block_display');
   }
 }
+
+writeBtn.addEventListener('click', function(){
+  popUpWrite.classList.add('write-us_display');
+})
+
+closePopUpWrite.addEventListener('click', function(){
+  popUpWrite.classList.remove('write-us_display');
+})
+
+miniMap.addEventListener('click', function(){
+  popUpBigMap.classList.add('popup-map_display');
+})
+
+closePopUpBigMap.addEventListener('click', function(){
+  popUpBigMap.classList.remove('popup-map_display');
+})
+

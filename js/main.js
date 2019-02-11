@@ -38,10 +38,10 @@ function slideShow(textContent) {
   currentSlide[currentIndex].classList.add('current-slide__item_after');
 }
 
-function clearClassService () {
+function clearClassService() {
   for (var i = 0; i < serviceContent.length; i++) {
-  serviceBtn[i].classList.remove('services__control-btn_active');
-  serviceContent[i].classList.remove('services__block_display');
+    serviceBtn[i].classList.remove('services__control-btn_active');
+    serviceContent[i].classList.remove('services__block_display');
   }
 }
 
@@ -52,10 +52,10 @@ for (var i = 0; i < serviceBtn.length; i++) {
 }
 
 
-function serviceShow (textContent){
+function serviceShow(textContent) {
   clearClassService();
 
-  if(textContent === 'Доставка') {
+  if (textContent === 'Доставка') {
     serviceBtn[0].classList.add('services__control-btn_active');
     serviceContent[0].classList.add('services__block_display');
   }
@@ -69,19 +69,18 @@ function serviceShow (textContent){
   }
 }
 
-writeBtn.addEventListener('click', function(){
+writeBtn.addEventListener('click', function () {
   popUpWrite.classList.add('write-us_display');
 })
 
-closePopUpWrite.addEventListener('click', function(){
+closePopUpWrite.addEventListener('click', function () {
   popUpWrite.classList.remove('write-us_display');
 })
 
-miniMap.addEventListener('click', function(){
+miniMap.addEventListener('click', function () {
   popUpBigMap.classList.add('popup-map_display');
 })
 
-closePopUpBigMap.addEventListener('click', function(){
+closePopUpBigMap.addEventListener('click', function () {
   popUpBigMap.classList.remove('popup-map_display');
 })
-

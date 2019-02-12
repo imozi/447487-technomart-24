@@ -1,15 +1,16 @@
 var sliderContent = document.querySelectorAll('.offers__slider-item'),
-    sliderBtn = document.querySelectorAll('.offers__slider-btn'),
-    currentSlide = document.querySelectorAll('.current-slide__item'),
-    serviceBtn = document.querySelectorAll('.services__control-btn'),
-    serviceContent = document.querySelectorAll('.services__block-item'),
-    writeBtn = document.querySelector('.about__contacts-write-us'),
-    popUpWrite = document.querySelector('.write-us'),
-    closePopUpWrite = document.querySelector('.write-us__close'),
-    miniMap = document.querySelector('.about__map'),
-    popUpBigMap = document.querySelector('.popup-map'),
-    closePopUpBigMap = document.querySelector('.popup-map__close'),
-    currentIndex = 0;
+  sliderBtn = document.querySelectorAll('.offers__slider-btn'),
+  currentSlide = document.querySelectorAll('.current-slide__item'),
+  serviceBtn = document.querySelectorAll('.services__control-btn'),
+  serviceContent = document.querySelectorAll('.services__block-item'),
+  writeBtn = document.querySelector('.about__contacts-write-us'),
+  popUpWrite = document.querySelector('.write-us'),
+  closePopUpWrite = document.querySelector('.write-us__close'),
+  miniMap = document.querySelector('.about__map'),
+  popUpBigMap = document.querySelector('.popup-map'),
+  closePopUpBigMap = document.querySelector('.popup-map__close'),
+  myMap = null,
+  currentIndex = 0;
 
 for (var i = 0; i < sliderBtn.length; i++) {
   sliderBtn[i].addEventListener('click', function (e) {
@@ -79,8 +80,30 @@ closePopUpWrite.addEventListener('click', function () {
 
 miniMap.addEventListener('click', function () {
   popUpBigMap.classList.add('popup-map_display');
+
+  ymaps.ready(init);
+
+  function init() {
+
+    myMap = new ymaps.Map('map', {
+      center: [59.93863106, 30.32305450],
+      zoom: 16
+    });
+
+    var myPlacemark = new ymaps.Placemark([59.93862872, 30.32305125], {
+      iconContent: 'Техномарт',
+      balloonContent: 'Интернет-магазин строительных материалов и инструментов для ремонта "Техномарт" <br> <strong>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</strong>'
+    }, {
+        preset: 'islands#dotIcon',
+        iconColor: '#ee3643'
+      });
+    myMap.geoObjects.add(myPlacemark);
+
+  }
+
 })
 
 closePopUpBigMap.addEventListener('click', function () {
   popUpBigMap.classList.remove('popup-map_display');
+  myMap.destroy();
 })

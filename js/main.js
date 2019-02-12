@@ -94,9 +94,9 @@ miniMap.addEventListener('click', function () {
       iconContent: 'Техномарт',
       balloonContent: 'Интернет-магазин строительных материалов и инструментов для ремонта "Техномарт" <br> <strong>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</strong>'
     }, {
-        preset: 'islands#dotIcon',
-        iconColor: '#ee3643'
-      });
+      preset: 'islands#dotIcon',
+      iconColor: '#ee3643'
+    });
     myMap.geoObjects.add(myPlacemark);
 
   }

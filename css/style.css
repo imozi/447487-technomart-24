@@ -1793,6 +1793,7 @@ a {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 1.4;
+  color: #000000;
   text-transform: uppercase;
 }
 
@@ -1922,6 +1923,7 @@ a {
   content: "";
   background-image: url("../img/icons/icon-up-dir.svg");
   background-repeat: no-repeat;
+  opacity: 0.5;
 }
 
 .sorting__link-down::after {
@@ -1933,13 +1935,20 @@ a {
   content: "";
   background-image: url("../img/icons/icon-down-dir.svg");
   background-repeat: no-repeat;
+  opacity: 0.5;
 }
 
 .sorting__link-up_active::after {
+  opacity: 1;
   background-image: url("../img/icons/icon-up-dir-red..svg");
 }
 
-
+.sorting__link-up:hover::after,
+.sorting__link-down:hover::after,
+.sorting__link-up:focus::after,
+.sorting__link-down:focus::after {
+  opacity: 1;
+}
 
 .sorting__link_active {
   color: #ee3643;

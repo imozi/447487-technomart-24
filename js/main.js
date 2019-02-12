@@ -52,7 +52,6 @@ for (var i = 0; i < serviceBtn.length; i++) {
   })
 }
 
-
 function serviceShow(textContent) {
   clearClassService();
 
@@ -98,7 +97,6 @@ miniMap.addEventListener('click', function () {
       iconColor: '#ee3643'
     });
     myMap.geoObjects.add(myPlacemark);
-
   }
 
 })

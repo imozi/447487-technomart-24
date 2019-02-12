@@ -1277,20 +1277,23 @@ a {
   left: 50%;
   width: 940px;
   height: 446px;
-  display: none;
-  background-image: url("../img/map-big.jpg");
-  background-repeat: no-repeat;
-  background-position: -250px -300px;
+  overflow: hidden;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   box-shadow: 0px 0px 14.72px 1.28px rgba(47, 42, 43, 0.5);
 }
 
+.popup-map__img {
+  position: absolute;
+  z-index: -1;
+}
+
 .popup-map__close {
   position: absolute;
   top: 13px;
-  right: -35px;
+  right: 10px;
+  z-index: 999;
   width: 21px;
   height: 21px;
   background-image: url("../img/icons/close-form.svg");
@@ -1302,6 +1305,10 @@ a {
 
 .popup-map_display {
   display: block;
+}
+
+.ymaps-2-1-72-controls__toolbar_right {
+  margin-right: 34px;
 }
 
 .write-us {
@@ -1767,4 +1774,174 @@ a {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+}
+
+.breadcrumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  margin: 20px 0px;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumbs__link {
+  position: relative;
+  display: block;
+  margin-right: 40px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.breadcrumbs .breadcrumbs__item:first-child .breadcrumbs__link {
+  margin-right: 54px;
+}
+
+.breadcrumbs .breadcrumbs__item:first-child .breadcrumbs__link::before {
+  position: absolute;
+  top: 3px;
+  left: -2px;
+  width: 15px;
+  height: 12px;
+  content: "";
+  background-image: url("../img/icons/icon-home.svg");
+  background-repeat: no-repeat;
+}
+
+.breadcrumbs .breadcrumbs__item:first-child .breadcrumbs__link::after {
+  right: -36px;
+}
+
+.breadcrumbs__trail::after {
+  position: absolute;
+  top: 3px;
+  right: -26px;
+  width: 8px;
+  height: 12px;
+  content: "";
+  background-image: url("../img/icons/icon-right-small.svg");
+  background-repeat: no-repeat;
+}
+
+.name-product {
+  margin-bottom: 20px;
+  padding: 23px 0px 23px 28px;
+  background-color: #f2f6f8;
+}
+
+.name-product__title {
+    margin: 0;
+    font-size: 30px;
+    font-weight: normal;
+    color: #32425c;
+    text-transform: uppercase;
+}
+
+.filters-product {
+  width: 220px;
+  margin-right: 20px;
+}
+
+.catalog-product {
+  width: 700px;
+}
+
+.sorting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  margin-bottom: 20px;
+  padding: 9px 9px 9px 19px;
+  background-color: #f7f3ec;
+  border-radius: 3px;
+}
+
+.sorting__title {
+  margin: 0;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.sorting__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  margin-left: 140px;
+  padding: 0;
+  list-style: none;
+}
+
+.sorting__link {
+  position: relative;
+  display: block;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.3);
+  line-height: 1.3;
+  text-transform: uppercase;
+  border-bottom: 1px dotted #ee3643;
+}
+
+.sorting__link:hover,
+.sorting__link:focus {
+  color: rgba(0, 0, 0, 1);
+  border-bottom: 1px solid #ee3643;
+}
+
+.sorting__list :nth-child(2) {
+  margin-left: 21px;
+}
+
+.sorting__list :nth-child(3) {
+  margin-left: 15px;
+}
+
+.sorting__link-up,
+.sorting__link-down {
+  position: relative;
+}
+
+.sorting__link-up::after {
+  position: absolute;
+  top: 4px;
+  left: -1px;
+  width: 11px;
+  height: 10px;
+  content: "";
+  background-image: url("../img/icons/icon-up-dir.svg");
+  background-repeat: no-repeat;
+}
+
+.sorting__link-down::after {
+  position: absolute;
+  top: 4px;
+  left: -18px;
+  width: 11px;
+  height: 10px;
+  content: "";
+  background-image: url("../img/icons/icon-down-dir.svg");
+  background-repeat: no-repeat;
+}
+
+.sorting__link-up_active::after {
+  background-image: url("../img/icons/icon-up-dir-red..svg");
+}
+
+
+
+.sorting__link_active {
+  color: #ee3643;
+  border-bottom: none;
 }

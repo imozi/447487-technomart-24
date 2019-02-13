@@ -9,6 +9,9 @@ var sliderContent = document.querySelectorAll('.offers__slider-item'),
   miniMap = document.querySelector('.about__map'),
   popUpBigMap = document.querySelector('.popup-map'),
   closePopUpBigMap = document.querySelector('.popup-map__close'),
+  BuyBtn = document.querySelectorAll('.product__purchase-buy'),
+  popUpOrder = document.querySelector('.popup-order'),
+  closePopUpOrder = document.querySelector('.popup-order__close'),
   myMap = null,
   currentIndex = 0;
 
@@ -34,6 +37,7 @@ function slideShow(textContent) {
       currentIndex = sliderContent.length - 1;
     }
   }
+
   clearClassSlider();
   sliderContent[currentIndex].classList.add('offers__slider-item_display');
   currentSlide[currentIndex].classList.add('current-slide__item_after');
@@ -68,6 +72,17 @@ function serviceShow(textContent) {
     serviceContent[2].classList.add('services__block_display');
   }
 }
+
+for (var i = 0; i < BuyBtn.length; i++) {
+  BuyBtn[i].addEventListener('click', function () {
+    popUpOrder.classList.add('popup-order_display');
+  })
+}
+
+closePopUpOrder.addEventListener('click', function () {
+  console.log(1);
+  popUpOrder.classList.remove('popup-order_display');
+})
 
 writeBtn.addEventListener('click', function () {
   popUpWrite.classList.add('write-us_display');

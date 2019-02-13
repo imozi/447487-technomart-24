@@ -1990,6 +1990,7 @@ a {
 .filters-product__manufacturers,
 .filters-product__type {
   position: relative;
+  display: block;
   margin-bottom: 18px;
   padding-left: 35px;
   font-family: "PT Sans", "Arial", sans-serif;

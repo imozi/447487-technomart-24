@@ -2008,7 +2008,7 @@ a {
   content: "";
   background-image: url("../img/icons/checkbox-off.svg");
   background-repeat: no-repeat;
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 .filters-product__choice:checked + .filters-product__manufacturers::before {
@@ -2024,11 +2024,25 @@ a {
   content: "";
   background-image: url("../img/icons/radio-off.svg");
   background-repeat: no-repeat;
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 .filters-product__choice:checked + .filters-product__type::before {
   background-image: url("../img/icons/radio-on.svg");
+}
+
+.filters-product__choice:disabled + .filters-product__manufacturers,
+.filters-product__choice:disabled + .filters-product__type {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+
+.filters-product__choice:disabled + .filters-product__manufacturers::before {
+  opacity: 0.3;
+}
+
+.filters-product__choice:disabled + .filters-product__type::before {
+  opacity: 0.1;
 }
 
 .filters-product__show {
@@ -2247,4 +2261,77 @@ a {
 
 .popup-order_display {
   display: block;
+}
+
+.page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  margin-top: 30px;
+}
+
+.page__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  margin-right: 10px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+}
+
+.page__link_active {
+  color: #ffffff;
+  background-color: #ee3643;
+  border: none;
+}
+
+.page__link-next {
+  width: 140px;
+  text-transform: uppercase;
+}
+
+.page__link:hover,
+.page__link:focus {
+  border: 1px solid #bdc6ca;
+}
+
+.page__link:active {
+  color: #000000;
+  border: 1px solid #ee3643;
+}
+
+.wrapper-about-product {
+  margin-top: 60px;
+  background-color: #f2f6f8;
+}
+
+.about-product {
+  padding-top: 57px;
+  padding-bottom: 68px;
+}
+
+.about-product__title,
+.about-product__subtitle {
+  margin: 0;
+}
+
+.about-product__title {
+  font-size: 30px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.about-product__subtitle  {
+  margin-top: 19px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 1.9;
 }

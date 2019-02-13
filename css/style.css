@@ -2109,6 +2109,7 @@ a {
 .sorting__link-up,
 .sorting__link-down {
   position: relative;
+  display: block;
 }
 
 .sorting__link-up::after {

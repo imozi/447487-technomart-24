@@ -12,8 +12,8 @@
   <header class="header">
     <div class="header__wrapper">
       <div class="container container_flex">
-        <a class="header__logo-link"><img class="header__logo-img" src="img/logo-header.png" alt="Техномарт" width="110"
-            height="18"></a>
+        <a class="header__logo-link"><img class="header__logo-img" src="img/logo-header.png" width="110"
+          height="18" alt="Техномарт" ></a>
         <form class="search" action="https://echo.htmlacademy.ru" method="get">
           <input class="search__input" id="search" type="search" name="search" placeholder="Поиск:" required>
           <label class="search__label" for="search" aria-label="Поиск"></label>
@@ -108,7 +108,7 @@
         <a href="#" class="popular-link">Все популярные товары</a>
       </div>
       <div class="wrapper-product">
-        <article class="product" tabindex="0">
+        <article class="product">
           <h2 class="visually-hidden">Описание товара</h2>
           <section class="product__about">
             <img class="product__image" src="img/bosh-bfg-9000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
@@ -117,11 +117,11 @@
             <p class="product__price">25500 Р.</p>
           </section>
           <div class="product__purchase">
-            <button class="product__purchase-buy">Купить</button>
-            <button class="product__purchase-bookmark">В закладки</button>
+            <a href="#buy" class="product__purchase-buy">Купить</a>
+            <a href="#bookmarks" class="product__purchase-bookmark">В закладки</a>
           </div>
         </article>
-        <article class="product" tabindex="0">
+        <article class="product">
           <h2 class="visually-hidden">Описание товара</h2>
           <section class="product__about">
             <img class="product__image" src="img/bosh-bfg-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
@@ -130,11 +130,11 @@
             <p class="product__price">15500 Р.</p>
           </section>
           <div class="product__purchase">
-            <button class="product__purchase-buy">Купить</button>
-            <button class="product__purchase-bookmark">В закладки</button>
+            <a href="#buy" class="product__purchase-buy">Купить</a>
+            <a href="#bookmarks" class="product__purchase-bookmark">В закладки</a>
           </div>
         </article>
-        <article class="product" tabindex="0">
+        <article class="product">
           <h2 class="visually-hidden">Описание товара</h2>
           <section class="product__about">
             <img class="product__image" src="img/bosh-bfg-6000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
@@ -143,11 +143,11 @@
             <p class="product__price">25500 Р.</p>
           </section>
           <div class="product__purchase">
-            <button class="product__purchase-buy">Купить</button>
-            <button class="product__purchase-bookmark">В закладки</button>
+            <a href="#buy" class="product__purchase-buy">Купить</a>
+            <a href="#bookmarks" class="product__purchase-bookmark">В закладки</a>
           </div>
         </article>
-        <article class="product product_new" tabindex="0">
+        <article class="product product_new">
           <h2 class="visually-hidden">Описание товара</h2>
           <section class="product__about">
             <img class="product__image" src="img/bosh-bfg-2000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
@@ -156,8 +156,8 @@
             <p class="product__price">12500 Р.</p>
           </section>
           <div class="product__purchase">
-            <button class="product__purchase-buy">Купить</button>
-            <button class="product__purchase-bookmark">В закладки</button>
+            <a href="#buy" class="product__purchase-buy">Купить</a>
+            <a href="#bookmarks" class="product__purchase-bookmark">В закладки</a>
           </div>
         </article>
       </div>
@@ -179,28 +179,28 @@
       </div>
       <div class="wrapper-manufacturers">
         <a href="#" class="manufacturers__link">
-          <img class="manufacturers__img" src="img/bosch.jpg" alt="Bosh">
+          <img class="manufacturers__img" src="img/bosch.jpg" width="126" height="37" alt="Bosch">
         </a>
         <a href="#" class="manufacturers__link">
-          <img class="manufacturers__img" src="img/Makita.jpg" alt="Makita">
+          <img class="manufacturers__img" src="img/Makita.jpg" width="123" height="40" alt="Makita">
         </a>
         <a href="#" class="manufacturers__link">
-          <img class="manufacturers__img" src="img/DeWALT.jpg" alt="DeWALT">
+          <img class="manufacturers__img" src="img/DeWALT.jpg" width="146" height="44" alt="DeWALT">
         </a>
         <a href="#" class="manufacturers__link">
-          <img class="manufacturers__img" src="img/Interstol.jpg" alt="Интерскол">
+          <img class="manufacturers__img" src="img/Interstol.jpg" width="200" height="88" alt="Интерскол">
         </a>
         <a href="#" class="manufacturers__link">
-          <img class="manufacturers__img" src="img/Hitachi.jpg" alt="Hitachi">
+          <img class="manufacturers__img" src="img/Hitachi.jpg" width="169" height="31" alt="Hitachi">
         </a>
         <a href="#" class="manufacturers__link">
-          <img class="manufacturers__img" src="img/LG.jpg" alt="LG">
+          <img class="manufacturers__img" src="img/LG.jpg" width="121" height="73" alt="LG">
         </a>
         <a href="#" class="manufacturers__link">
-          <img class="manufacturers__img" src="img/AEG.jpg" alt="AEG">
+          <img class="manufacturers__img" src="img/AEG.jpg" width="151" height="96" alt="AEG">
         </a>
         <a href="#" class="manufacturers__link">
-          <img class="manufacturers__img" src="img/Metabo.jpg" alt="Metabo">
+          <img class="manufacturers__img" src="img/Metabo.jpg" width="204" height="69" alt="Metabo">
         </a>
       </div>
     </section>
@@ -261,8 +261,8 @@
       <div class="about__contacts">
         <h3 class="about__contacts-title">Контакты</h3>
         <p class="about__contacts-pick-up">Вы можете забрать товар сами,<br>заехав в наш офис:</p>
-        <img class="about__map" src="img/map-small.jpg" width="300" height="158" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
-        <button class="about__contacts-write-us">Заблудились? Напишите нам!</button>
+        <a href="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3Afa64608eda52ee902dcb11177acc6af42556fdec6747dbd28cc65c0f084d6217&amp;width=600&amp;height=450&amp;lang=ru_RU" class="about__map-link" target="_blank"><img class="about__map" src="img/map-small.jpg" width="300" height="158" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></a>
+        <a href="#write-us" class="about__contacts-write-us">Заблудились? Напишите нам!</a>
       </div>
       <div id="map" class="popup-map">
         <img class="popup-map__img" src="img/map-big.jpg" width="940" height="446" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
@@ -334,8 +334,8 @@
       </div>
     </div>
   </footer>
-  <script src="js/main.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=e5bbda38-1328-4438-9f35-6b2fd9695d7d&lang=ru_RU"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

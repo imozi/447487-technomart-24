@@ -6,7 +6,7 @@ var sliderContent = document.querySelectorAll('.offers__slider-item'),
   writeBtn = document.querySelector('.about__contacts-write-us'),
   popUpWrite = document.querySelector('.write-us'),
   closePopUpWrite = document.querySelector('.write-us__close'),
-  miniMap = document.querySelector('.about__map'),
+  miniMapLink = document.querySelector('.about__map-link'),
   popUpBigMap = document.querySelector('.popup-map'),
   closePopUpBigMap = document.querySelector('.popup-map__close'),
   BuyBtn = document.querySelectorAll('.product__purchase-buy'),
@@ -74,17 +74,18 @@ function serviceShow(textContent) {
 }
 
 for (var i = 0; i < BuyBtn.length; i++) {
-  BuyBtn[i].addEventListener('click', function () {
+  BuyBtn[i].addEventListener('click', function (e) {
+    e.preventDefault();
     popUpOrder.classList.add('popup-order_display');
   })
 }
 
 closePopUpOrder.addEventListener('click', function () {
-  console.log(1);
   popUpOrder.classList.remove('popup-order_display');
 })
 
-writeBtn.addEventListener('click', function () {
+writeBtn.addEventListener('click', function (e) {
+  e.preventDefault();
   popUpWrite.classList.add('write-us_display');
 })
 
@@ -92,7 +93,8 @@ closePopUpWrite.addEventListener('click', function () {
   popUpWrite.classList.remove('write-us_display');
 })
 
-miniMap.addEventListener('click', function () {
+miniMapLink.addEventListener('click', function (e) {
+  e.preventDefault();
   popUpBigMap.classList.add('popup-map_display');
 
   ymaps.ready(init);

@@ -824,7 +824,7 @@ a {
   top: 0;
   content: "";
   border: 19px solid transparent;
-  border-left: 19px solid #ee3643;
+  border-left: 19.5px solid #ee3643;
 }
 
 .product__purchase {

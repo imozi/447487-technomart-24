@@ -1,5 +1,3 @@
-'use strict'
-
 var sliderContent = document.querySelectorAll('.offers__slider-item'),
   sliderBtn = document.querySelectorAll('.offers__slider-btn'),
   currentSlide = document.querySelectorAll('.current-slide__item'),

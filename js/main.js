@@ -1,3 +1,5 @@
+'use strict'
+
 var sliderContent = document.querySelectorAll('.offers__slider-item'),
   sliderBtn = document.querySelectorAll('.offers__slider-btn'),
   currentSlide = document.querySelectorAll('.current-slide__item'),
@@ -6,6 +8,9 @@ var sliderContent = document.querySelectorAll('.offers__slider-item'),
   writeBtn = document.querySelector('.about__contacts-write-us'),
   popUpWrite = document.querySelector('.write-us'),
   closePopUpWrite = document.querySelector('.write-us__close'),
+  writeForm = document.querySelector('.write-us-form'),
+  yourName = document.querySelector('[type=text]'),
+  yourEmail = document.querySelector('[type=email]'),
   miniMapLink = document.querySelector('.about__map-link'),
   popUpBigMap = document.querySelector('.popup-map'),
   closePopUpBigMap = document.querySelector('.popup-map__close'),
@@ -19,14 +24,14 @@ for (var i = 0; i < sliderBtn.length; i++) {
   sliderBtn[i].addEventListener('click', function (e) {
     slideShow(e.target.attributes[1].textContent);
   })
-}
+};
 
 function clearClassSlider() {
   for (var i = 0; i < sliderContent.length; i++) {
     sliderContent[i].classList.remove('offers__slider-item_display');
     currentSlide[i].classList.remove('current-slide__item_after');
   }
-}
+};
 
 function slideShow(textContent) {
   if (textContent === 'Предыдущий слайд') {
@@ -36,25 +41,25 @@ function slideShow(textContent) {
     if (currentIndex === -1) {
       currentIndex = sliderContent.length - 1;
     }
-  }
+  };
 
   clearClassSlider();
   sliderContent[currentIndex].classList.add('offers__slider-item_display');
   currentSlide[currentIndex].classList.add('current-slide__item_after');
-}
+};
 
 function clearClassService() {
   for (var i = 0; i < serviceContent.length; i++) {
     serviceBtn[i].classList.remove('services__control-btn_active');
     serviceContent[i].classList.remove('services__block_display');
   }
-}
+};
 
 for (var i = 0; i < serviceBtn.length; i++) {
   serviceBtn[i].addEventListener('click', function (e) {
     serviceShow(e.target.textContent);
   })
-}
+};
 
 function serviceShow(textContent) {
   clearClassService();
@@ -71,27 +76,38 @@ function serviceShow(textContent) {
     serviceBtn[2].classList.add('services__control-btn_active');
     serviceContent[2].classList.add('services__block_display');
   }
-}
+};
 
 for (var i = 0; i < BuyBtn.length; i++) {
   BuyBtn[i].addEventListener('click', function (e) {
     e.preventDefault();
     popUpOrder.classList.add('popup-order_display');
   })
-}
+};
 
 closePopUpOrder.addEventListener('click', function () {
   popUpOrder.classList.remove('popup-order_display');
-})
+});
 
 writeBtn.addEventListener('click', function (e) {
   e.preventDefault();
   popUpWrite.classList.add('write-us_display');
-})
+  yourName.focus();
+});
+
+writeForm.addEventListener('submit', function (e) {
+  if (!yourName.value || !yourEmail.value) {
+    e.preventDefault();
+    popUpWrite.classList.remove('write-us_error');
+    popUpWrite.offsetWidth = popUpWrite.offsetWidth;
+    popUpWrite.classList.add('write-us_error');
+  }
+});
 
 closePopUpWrite.addEventListener('click', function () {
   popUpWrite.classList.remove('write-us_display');
-})
+  popUpWrite.classList.remove('write-us_error');
+});
 
 miniMapLink.addEventListener('click', function (e) {
   e.preventDefault();
@@ -116,9 +132,24 @@ miniMapLink.addEventListener('click', function (e) {
     myMap.geoObjects.add(myPlacemark);
   }
 
-})
+});
 
 closePopUpBigMap.addEventListener('click', function () {
   popUpBigMap.classList.remove('popup-map_display');
   myMap.destroy();
-})
+});
+
+window.addEventListener("keydown", function (e) {
+  if (e.keyCode === 27) {
+    if (popUpWrite.classList.contains("write-us_display")) {
+      popUpWrite.classList.remove('write-us_display');
+    }
+    if (popUpBigMap.classList.contains('popup-map_display')) {
+      popUpBigMap.classList.remove('popup-map_display');
+      myMap.destroy();
+    }
+    if (popUpOrder.classList.contains('popup-order_display')) {
+      popUpOrder.classList.remove('popup-order_display');
+    }
+  }
+});

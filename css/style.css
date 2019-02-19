@@ -77,6 +77,11 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* Стилизация страницы index */
 
 .visually-hidden {
@@ -782,6 +787,10 @@ a {
 
 .product__about {
   text-align: center;
+}
+
+.product__image {
+  min-height: 170px;
 }
 
 .product__name {

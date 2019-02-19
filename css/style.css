@@ -1440,6 +1440,11 @@ a {
   background-color: #ba2732;
 }
 
+.wrapper-name_error,
+.wrapper-email_error {
+  border-color: #ee3643;
+}
+
 .write-us__close {
   position: absolute;
   top: 16px;

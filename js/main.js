@@ -101,12 +101,16 @@ if (popUpWrite != null) {
       popUpWrite.classList.remove('write-us_error');
       popUpWrite.offsetWidth = popUpWrite.offsetWidth;
       popUpWrite.classList.add('write-us_error');
+      yourName.classList.add('wrapper-name_error');
+      yourEmail.classList.add('wrapper-email_error');
     }
   });
 
   closePopUpWrite.addEventListener('click', function () {
     popUpWrite.classList.remove('write-us_display');
     popUpWrite.classList.remove('write-us_error');
+    yourName.classList.remove('wrapper-name_error');
+    yourEmail.classList.remove('wrapper-email_error');
   });
 };
 

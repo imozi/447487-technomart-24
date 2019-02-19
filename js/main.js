@@ -87,55 +87,61 @@ closePopUpOrder.addEventListener('click', function () {
   popUpOrder.classList.remove('popup-order_display');
 });
 
-writeBtn.addEventListener('click', function (e) {
-  e.preventDefault();
-  popUpWrite.classList.add('write-us_display');
-  yourName.focus();
-});
-
-writeForm.addEventListener('submit', function (e) {
-  if (!yourName.value || !yourEmail.value) {
+if (popUpWrite != null) {
+  writeBtn.addEventListener('click', function (e) {
     e.preventDefault();
+    popUpWrite.classList.add('write-us_display');
+    yourName.focus();
+  });
+
+
+  writeForm.addEventListener('submit', function (e) {
+    if (!yourName.value || !yourEmail.value) {
+      e.preventDefault();
+      popUpWrite.classList.remove('write-us_error');
+      popUpWrite.offsetWidth = popUpWrite.offsetWidth;
+      popUpWrite.classList.add('write-us_error');
+    }
+  });
+
+  closePopUpWrite.addEventListener('click', function () {
+    popUpWrite.classList.remove('write-us_display');
     popUpWrite.classList.remove('write-us_error');
-    popUpWrite.offsetWidth = popUpWrite.offsetWidth;
-    popUpWrite.classList.add('write-us_error');
-  }
-});
+  });
+};
 
-closePopUpWrite.addEventListener('click', function () {
-  popUpWrite.classList.remove('write-us_display');
-  popUpWrite.classList.remove('write-us_error');
-});
+if (popUpBigMap != null) {
 
-miniMapLink.addEventListener('click', function (e) {
-  e.preventDefault();
-  popUpBigMap.classList.add('popup-map_display');
+  miniMapLink.addEventListener('click', function (e) {
+    e.preventDefault();
+    popUpBigMap.classList.add('popup-map_display');
 
-  ymaps.ready(init);
+    ymaps.ready(init);
 
-  function init() {
+    function init() {
 
-    myMap = new ymaps.Map('map', {
-      center: [59.93863106, 30.32305450],
-      zoom: 16
-    });
+      myMap = new ymaps.Map('map', {
+        center: [59.93863106, 30.32305450],
+        zoom: 16
+      });
 
-    var myPlacemark = new ymaps.Placemark([59.93862872, 30.32305125], {
-      iconContent: 'Техномарт',
-      balloonContent: 'Интернет-магазин строительных материалов и инструментов для ремонта "Техномарт" <br> <strong>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</strong>'
-    }, {
-      preset: 'islands#dotIcon',
-      iconColor: '#ee3643'
-    });
-    myMap.geoObjects.add(myPlacemark);
-  }
+      var myPlacemark = new ymaps.Placemark([59.93862872, 30.32305125], {
+        iconContent: 'Техномарт',
+        balloonContent: 'Интернет-магазин строительных материалов и инструментов для ремонта "Техномарт" <br> <strong>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</strong>'
+      }, {
+        preset: 'islands#dotIcon',
+        iconColor: '#ee3643'
+      });
+      myMap.geoObjects.add(myPlacemark);
+    }
 
-});
+  });
 
-closePopUpBigMap.addEventListener('click', function () {
-  popUpBigMap.classList.remove('popup-map_display');
-  myMap.destroy();
-});
+  closePopUpBigMap.addEventListener('click', function () {
+    popUpBigMap.classList.remove('popup-map_display');
+    myMap.destroy();
+  });
+};
 
 window.addEventListener("keydown", function (e) {
   if (e.keyCode === 27) {

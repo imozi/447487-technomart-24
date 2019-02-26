@@ -779,8 +779,8 @@ img {
 .product {
   position: relative;
   width: 220px;
-  height: 318px;
   margin-bottom: 21px;
+  padding-bottom: 19px;
   border: 1px solid #eaeaea;
   cursor: pointer;
   outline: none;
@@ -796,11 +796,13 @@ img {
 
 .product__name {
   width: 190px;
+  max-height: 42px;
   margin: auto;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 1.2;
   font-weight: 700;
+  overflow: hidden;
 }
 
 .product__discount {
@@ -812,6 +814,7 @@ img {
   font-weight: 700;
   color: #a9a9a9;
   text-decoration: line-through;
+  overflow: hidden;
 }
 
 .product__price {
@@ -1113,12 +1116,26 @@ img {
 }
 
 .services__block-subtitle {
-  max-height: 150px;
   margin-top: 16px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 1.8;
   overflow: hidden;
+}
+
+.services__block-delivery .services__block-subtitle {
+  max-width: 280px;
+  max-height: 90px;
+}
+
+.services__block-guarantee .services__block-subtitle {
+  max-width: 380px;
+  max-height: 120px;
+}
+
+.services__block-credit .services__block-subtitle {
+  max-width: 280px;
+  max-height: 90px;
 }
 
 .services__block-delivery::after {
@@ -1852,11 +1869,11 @@ img {
   text-transform: uppercase;
 }
 
-.breadcrumbs .breadcrumbs__item:first-child .breadcrumbs__link {
+.breadcrumbs__link_mr {
   margin-right: 54px;
 }
 
-.breadcrumbs .breadcrumbs__item:first-child .breadcrumbs__link::before {
+.breadcrumbs__link_mr::before {
   position: absolute;
   top: 3px;
   left: -2px;
@@ -1867,7 +1884,7 @@ img {
   background-repeat: no-repeat;
 }
 
-.breadcrumbs .breadcrumbs__item:first-child .breadcrumbs__link::after {
+.breadcrumbs__link_mr::after {
   right: -36px;
 }
 
@@ -2487,7 +2504,7 @@ img {
   75% {
     -webkit-transform: translate(-50%, -10px);
     -ms-transform: translate(-50%, -10px);
-    transform: translate3d(-50%, -10px);
+    transform: translate(-50%, -10px);
   }
 
   90% {

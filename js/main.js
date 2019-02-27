@@ -147,9 +147,9 @@ if (popUpBigMap != null) {
   });
 };
 
-window.addEventListener("keydown", function (e) {
+window.addEventListener('keydown', function (e) {
   if (e.keyCode === 27) {
-    if (popUpWrite.classList.contains("write-us_display")) {
+    if (popUpWrite.classList.contains('write-us_display')) {
       popUpWrite.classList.remove('write-us_display');
     }
     if (popUpBigMap.classList.contains('popup-map_display')) {
